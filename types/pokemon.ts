@@ -20,5 +20,5 @@ export interface Pokemon {
   image: string;
   types: string[];
   attacks: Attacks;
-  evolutions?: Evolution[]; // Optional because some Pokémon may not evolve
+  evolutions?: Evolution[];
 }

@@ -1,21 +1,21 @@
-import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
+// import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
-const cache = new InMemoryCache({
-  typePolicies: {
-    Query: {
-      fields: {
-        pokemon: {
-          // Make sure the pokemon query is cached by its name
-          keyArgs: ["name"],
-        },
-      },
-    },
-  },
-});
+// const client = new ApolloClient({
+//   link: new HttpLink({
+//     uri: 'https://graphql-pokemon2.vercel.app/', // Pokémon GraphQL API
+//   }),
+//   cache: new InMemoryCache(), // Apollo cache setup
+// });
+
+// export default client;
+
+import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: "https://graphql-pokemon2.vercel.app/",
-  cache,
+  link: new HttpLink({
+    uri: 'https://graphql-pokemon2.vercel.app/', // Pokémon GraphQL API
+  }),
+  cache: new InMemoryCache(), // Apollo cache setup
 });
 
 export default client;
