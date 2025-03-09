@@ -1,4 +1,3 @@
-// /__mocks__/pokemonData.ts
 export const bulbasaur = {
   data: {
     pokemon: {
