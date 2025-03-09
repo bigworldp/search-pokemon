@@ -1,26 +1,52 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Apply a custom font to the entire app */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Customize the button hover effect */
+button:hover {
+  background-color: #2563eb;
+  /* A blue shade when hovering */
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Custom shadow for the Pokémon card */
+.pokemon-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styling for Pokémon name */
+.pokemon-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Pokémon type badge - optional if you want to add extra customization */
+.type-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+/* Additional hover effect for Pokémon type badges */
+.type-badge:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* For handling responsiveness */
+@media (max-width: 768px) {
+  .pokemon-card {
+    padding: 1rem;
+  }
+
+  .pokemon-name {
+    font-size: 1.5rem;
+  }
 }

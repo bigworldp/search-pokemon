@@ -5,6 +5,8 @@ interface PokemonResultProps {
   pokemon: Pokemon | null;
 }
 
+
+
 export default function PokemonResult({ pokemon }: PokemonResultProps) {
   const router = useRouter();
 
@@ -23,8 +25,8 @@ export default function PokemonResult({ pokemon }: PokemonResultProps) {
     <div className="flex flex-col items-center p-4">
       <h2 className="text-3xl font-semibold">{pokemon.name}</h2>
       <img src={pokemon.image} alt={pokemon.name} className="w-48 h-48 object-cover my-4" />
-      <p><strong>Types:</strong> {pokemon.types.join(", ")}</p>
-
+      <p><strong >Types:</strong> {pokemon.types.join(", ")}</p>
+      
       <div className="my-4">
         <h3 className="font-bold">Fast Attacks:</h3>
         <ul>
