@@ -12,7 +12,6 @@ export default function PokemonResult({ pokemon }: PokemonResultProps) {
     return <p className="text-center">No Pokémon found. Please try again!</p>;
   }
 
-  // Handle evolution click to update the search query param
   const handleEvolutionClick = (evolutionName: string) => {
     router.push({
       pathname: "/",

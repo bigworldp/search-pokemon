@@ -10,7 +10,7 @@ export default function Home() {
 
   const { data, loading, error } = useQuery(GET_POKEMON, {
     variables: { name: searchName },
-    skip: !searchName, // Skip query if no name is entered
+    skip: !searchName,
   });
 
   return (
